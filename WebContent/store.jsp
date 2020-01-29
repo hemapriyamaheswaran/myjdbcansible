@@ -9,7 +9,7 @@ String pass1=request.getParameter("rconfirmpass");
 if(pass.equals(pass1)){
 try{
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn=DriverManager.getConnection("jdbc:mysql://demodb.mysql.database.azure.com:3306/testdb","zippyops@demodb","MYSQLzipp1");
+	Connection conn=DriverManager.getConnection("jdbc:mysql://mysqlldb.mysql.database.azure.com:3306/testdb","zippyops@mysqlldb","MYSQLzipp1");
 	PreparedStatement ps=conn.prepareStatement("insert into registration values(?,?,?,?)");
 	ps.setString(1, name);
 	ps.setString(2, email);
